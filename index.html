@@ -7,13 +7,13 @@
     <link rel="shorcut icon" href="assets/img/icon/icon.jpg" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
-
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
     <title>{r.e.m. beauty}</title>
 </head>
 <body>
+    
+    <!-- Header Start -->
     <header>
         <div class="container_menu">
             <div class="menu">
@@ -21,6 +21,8 @@
                 <label id="label_check" for="check_menu">
                     <i class='bx bx-menu-alt-left'></i>
                   </label>
+                
+                <!-- Nav Start -->
                 <nav>
                     <ul>
                         <li> <a href= "#" id="selected">New</a></li>
@@ -54,6 +56,7 @@
                         </li>
                     </ul>
                 </nav>
+                <!-- Nav End -->
             </div>
             <div>
                <a href="#"><img src="assets/img/icon/logo.png" alt="" width="200"></a>
@@ -97,6 +100,7 @@
             </div>
         </div>
     </header>
+    <!-- Header End -->
 
    <main>
         <section class="banner-1">
@@ -118,7 +122,7 @@
                 <img src="assets/img/icon/cruelty_free.png"alt="">
                 <p>Cruelty-Free</p>
             </div>
-            <div class="car-1">
+            <div class="card-1">
                 <img src="assets/img/icon/paraben_free.png" alt="">
                 <p>Paraben-Free</p>
             </div>
@@ -136,15 +140,19 @@
                     <hr>
                 </div>
             </div>
-            <div class="wrapper">
-               
-                    <div class="carousel">
-                        <div class="carousel-controls">
-                            <i class='bx bx-chevron-left'></i> 
-                            <i class='bx bx-chevron-right'></i>
-                        </div>
-                        
-                        <div class="card-2">
+            <div class="wrapper">   
+                <i id="left" class='bx bx-chevron-left'></i>
+                    <div class="carousel">                  
+                        <img src="img/img-1.jpg" alt="" draggable="false">
+                        <img src="img/img-2.jpg" alt="" draggable="false">
+                        <img src="img/img-3.jpg" alt="" draggable="false">
+                        <img src="img/img-4.jpg" alt="" draggable="false">
+                        <img src="img/img-5.jpg" alt="" draggable="false">
+                        <img src="img/img-6.jpg" alt="" draggable="false">
+                        <img src="img/img-7.jpg" alt="" draggable="false">
+                        <img src="img/img-8.jpg" alt="" draggable="false">
+                        <img src="img/img-9.jpg" alt="" draggable="false"> 
+                        <!-- <div class="card-2" draggable="false"> 
                             <div class="card-2-elements">
                                 <img src="assets/img/slider/rubor.png" alt="">
                                 <div class="card-2-text-icons">
@@ -163,10 +171,9 @@
                                     <p>blush brush</p>
                                 </div>
                             </div>
-                            <button class="card-2-btn">Add to bag $24</button>
-                        </div>
-                            
-                        <div class="card-2">
+                        <button class="card-2-btn">Add to bag $24</button>
+                        </div>                           
+                        <div class="card-2" draggable="false">
                             <div class="card-2-elements">
                                 <img src="assets/img/slider/bronzer.png" alt="">
                                 <div class="card-2-text-icons">
@@ -186,9 +193,8 @@
                                 </div>
                             </div>
                             <button class="card-2-btn">Add to bag $26</button>
-                        </div>
-                        
-                        <div class="card-2">
+                        </div>                      
+                        <div class="card-2" draggable="false">
                             <div class="card-2-elements">
                                 <img src="assets/img/slider/spray fijador.png" alt="">
                                 <div class="card-2-text-icons">
@@ -208,9 +214,8 @@
                                 </div>
                             </div>
                             <button class="card-2-btn">Add to bag $26</button>
-                        </div>
-                       
-                        <div class="card-2">
+                        </div>                       
+                        <div class="card-2" draggable="false">
                             <div class="card-2-elements">
                                 <img src="assets/img/slider/brocha blush.png" alt="">
                                 <div class="card-2-text-icons">
@@ -230,9 +235,8 @@
                                 </div>
                             </div>
                             <button class="card-2-btn">Add to bag $24</button>
-                        </div>
-                  
-                        <div class="card-2">
+                        </div>                  
+                        <div class="card-2" draggable="false">
                             <div class="card-2-elements">
                                 <img src="assets/img/slider/bronzer blush.png" alt="">
                                 <div class="card-2-text-icons">
@@ -252,28 +256,20 @@
                                 </div>
                             </div>
                             <button class="card-2-btn">Add to bag $25</button>
-                        </div>
-                     </div>
-                
-              
-                
+                        </div> -->
+                     </div> 
+                <i id="right" class='bx bx-chevron-right'></i>
              </div>
         </section>
-
-
         <section>
             <div class="video-container">
                 <video autoplay muted loop id="video-background">
                     <source src="assets/video/video.mp4" type="video/mp4">
-                </video>
-               
+                </video> 
             </div>
         </section>
-
-
         <section class="slider-2">
             <article class="slider-2-element">
-                <!-- <img src="assets/img/modelo.jpg" alt=""> -->
                 <div class="banner-1-box">
                     <h2 class="sub">Buff, blend & set</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -283,7 +279,6 @@
             </article>
         </section>
    </main>
-
    <script src="script.js"></script>
 </body>
 </html>
