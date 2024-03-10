@@ -22,8 +22,8 @@ selectBtn.addEventListener("click", () => optionMenu.classList.toggle("active"))
 
 //  Slider 1 Start
 const carousel = document.querySelector(".carousel"),  // accede al contenido de la clase carousel
-firstImg = carousel.querySelectorAll("img")[0]; //accedio a la etiqueta img y se posiciona en la img 1 
-arrowIcons = document.querySelectorAll(".wrapper i"); // accede a la clase wrapper y a todas las etiquetas i que hay en html
+firstImg = carousel.querySelectorAll(".card-2")[0]; //accedio a la etiqueta img y se posiciona en la img 1 
+arrowIcons = document.querySelectorAll(".wrapper .icon-tools"); // accede a la clase wrapper y a todas las etiquetas i que hay en html
 
 console.log(firstImg);
 
