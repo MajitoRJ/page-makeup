@@ -34,7 +34,6 @@ const showHideIcons = () =>{
     let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
     arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" :"block"; // esto es una condicion ternaria al igual que la siguiete, funciona como el if y else
     arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" :"block";
-
 }
 
 arrowIcons.forEach(icon => {
@@ -50,7 +49,6 @@ const autoSlide = ()  => {
     positionDiff = Math.abs(positionDiff);
     let firstImgWidth = firstImg.clientWidth + 14;
     let valDifference = firstImgWidth - positionDiff;
-
     if(carousel.scrollLeft > prevScrollLeft) { // if user is scolling to the right 
     //    return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;0
     }
@@ -58,8 +56,6 @@ const autoSlide = ()  => {
     // carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
 
 }
-
-
 const dragStart = (e) =>{
     isDragStart = true;
     prevPageX = e.pageX || e.touches[0].pageX;
@@ -100,11 +96,12 @@ carousel.addEventListener("touchend", dragStop);
 //  Slider 1 End
 
 // Slider 2 Start
+// Declaracion de variables
 const btnLeft = document.querySelector(".btn-left"),
       btnRight = document.querySelector(".btn-right"),
       slider = document.querySelector("#slider"),
-      sliderSection = document.querySelectorAll(".slider-section"); // cantidad de img
-
+      sliderSection = document.querySelectorAll(".slider-section");
+// Final de las delacraciones
 btnLeft.addEventListener("click", e => moveToLeft())
 btnRight.addEventListener("click", e => moveToRight())
 
@@ -130,15 +127,12 @@ function moveToRight() {
 }
 function moveToLeft() {
     counter--;
-    
     if(counter < 0 ) {
         counter = sliderSection.length-1;
         operacion = withImg * (sliderSection.length-1)
-        // console.log(operacion)
         slider.style.transform = `translate(-${operacion}%)`
         return;
-    } 
-     
+    }     
     operacion = operacion - withImg
     slider.style.transform = `translate(-${operacion}%)`
     slider.style.transition = "all ease .6s"
