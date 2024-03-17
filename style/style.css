@@ -25,6 +25,7 @@ header {
     top: 0;
     left: 0;
     background: white;
+    z-index: 998;
 }
 
 /* Header superior */
@@ -45,6 +46,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+@media screen and (max-width: 400px){
+    .container_menu{
+        padding:0px ;
+    }
 }
 
 /* icono del menu */
@@ -215,6 +221,23 @@ nav ul  li ul  li a:hover {
 }
  /*menu desplegable responsive end  */
 
+.logo-img{
+    display: inline-block;
+    width: 400px;
+    height: 40px;
+}
+@media screen and (max-width: 800px){
+    .logo-img{
+        width: 200px;
+        height: 20px;
+    }
+}
+@media screen and (max-width: 400px){
+    .logo-img{
+        width: 100px;
+        height: 10px;
+    }
+}
 .btn-inicio{
     display: flex;
 }
@@ -224,7 +247,7 @@ nav ul  li ul  li a:hover {
     margin-right:4px;
     display: flex;
     background: rgb(255, 255, 255);
-    /* padding: 2px; */
+    padding: 0px 5px ;
     font-size: 15px;
     /* font-weight: 400; */
     border-radius: 8px;
@@ -232,6 +255,13 @@ nav ul  li ul  li a:hover {
     justify-content: space-between;
     cursor: pointer;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);  
+}
+@media screen and (max-width: 769px) {
+    .select-menu{
+        visibility:hidden ;
+        width: 0px;
+        height: 0px;
+    }
 }
 
 
@@ -241,17 +271,19 @@ nav ul  li ul  li a:hover {
 }
 
 .select-menu.active .select-btn .bx-chevron-down {
-transform: rotate(-180deg);
+    transform: rotate(-180deg);
 }
 
 .select-menu .options{
     position: relative;
-    padding: 2px;
-    margin-top: 10px;
+    padding: 5px;
+    margin-top: 50px;
     border-radius: 8px;
     background: white;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     display: none;
+    z-index: 999;
+
 }
 .select-menu.active .options {
     display: block;
@@ -300,6 +332,7 @@ transform: rotate(-180deg);
 .btn-funcionalidades{
     display: flex;
     padding: 0 5px;
+    cursor: pointer;
     margin: 0 3px;
     background: transparent;
     border: none;
@@ -322,20 +355,42 @@ transform: rotate(-180deg);
     background-size: cover;
     height: 80vh;
 }
+ @media screen and (max-width:769px){
+    .banner-1{
+        height: 60vh;
+    }
+}
 
 .banner-1-box{
     position: relative;
-    bottom: -500px;
+    bottom: -400px;
     margin-left: 30px;
     width: 220px;
     color: white;
  }
 
-.banner-1-box h3{
+ .banner-1-box h3{
     margin-bottom: 15px;
     font-size: 15px;
     font-weight: lighter;
  }
+
+ @media screen and (max-width:769px){
+    .banner-1-box{
+        bottom: -300px;
+        font-size: 15px;
+    }
+    .banner-1-box h2{   
+        font-size: 13px;
+    }
+    .banner-1-box h3{   
+        font-size: 10px;
+    }
+    .banner-1-box {
+        font-size: 10px;
+    }
+}
+
 
 .sub{ 
     font-family: "Kode Mono", monospace;  
@@ -353,11 +408,27 @@ transform: rotate(-180deg);
 
 /* section icons start */
 .icons-cards{
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     margin-top: 25px;
     text-align: center;
 }
+.card-1 img{
+    width: 100px;
+}
+
+@media screen and (max-width: 769px) {
+    .icons-cards{
+        grid-template-columns:repeat(2, 1fr);
+    }
+    .card-1{
+        margin-bottom: 30px;
+    }
+    .card-1 img{
+        width: 80px;
+    }
+}
+
 /* section icons end */
 
 /* encabezado slider 1 start */
@@ -370,8 +441,15 @@ transform: rotate(-180deg);
     align-items: center;
 }
 .title-slider{
+    margin-bottom: 10px;
     font-size: 35px;
     padding-left: 10%;
+}
+
+@media screen and (max-width: 769px){
+    .title-slider{
+        font-size: 20px;
+    } 
 }
 .hr{
     width: 30%;   
@@ -553,6 +631,15 @@ transform: rotate(-180deg);
     height: 100%;
     object-fit: cover;  
 }
+@media screen  and (max-width: 769px){
+    .container-carousel{
+        height: 30vh;
+    }
+    .slider-section img{
+        height: 30vh;
+    }
+}
+
 /*Controls Start */
 .btn-left,
 .btn-right{
@@ -590,20 +677,34 @@ transform: rotate(-180deg);
     grid-template-columns: repeat(2, 1fr); 
     gap: 20px; 
 }
+
 .banner-2-img{
     height: 110vh;
     background-image: url(../assets/img/banner_2.jpg);
     background-repeat:no-repeat ;
     background-position: center center;
-    background-size: cover;
-    
+    background-size: cover;  
 }
+
 .banner-2-text{
     height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
+}
 
+@media screen and (max-width: 769px) {
+    .banner-2{
+        grid-template-columns: repeat(1, 1fr); 
+        /* height: px; */
+    }
+    .banner-2-img{
+        height: 60vh;
+        background-position: center center;
+    }
+    .banner-2-text{
+        height: 60vh;
+    }
 }
 .banner-2-text div{
     padding: 0 50px;
@@ -633,26 +734,77 @@ footer{
 .footer-container{
     width: 60%;
     margin: 0 auto;
+    height: 70vh;
 }
+
+/* icons footer start */
+.footer-icons-cards{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 20px;
+}
+.card-3 img{
+    width: 60px;
+}
+.card-3 p{
+    font-size: 13px;
+}
+/* icons footer end */
+
+/* responisve icons footer start */
+@media screen and (max-width: 769px) {
+    .card-3 img{
+        width: 40px;
+    }
+    .card-3 p{
+        font-size: 10px;
+    }
+    .card-3{
+        margin: 30px;
+    }
+}
+/* responsive icons footer end */
+
 .footer-form div{
     width: 70%;
     margin: 0 auto;
 }
+
 .footer-form-heading{
     font-size: 20px;
     text-align: center;
     margin:30px 0px;
     
 }
+
+@media screen and (max-width: 769px){
+    .footer-form-heading{
+        font-size: 13px;    
+    }
+}
+
 .footer-form-email{
     display: flex;
     justify-content: space-between;
+}
+@media screen and (max-width: 769px){
+    .footer-form-email{
+       display: inline;
+    }
 }
 .footer-form-input{
     display: inline-block;
     width: 77%;
     padding: 15px;
 }
+@media screen and (max-width: 769px){
+    .footer-form-input{
+        width: 250px;
+        margin-left: -40px;     
+    } 
+}
+
 .footer-form-btn{
     display: block;
     width: 20%;
@@ -660,11 +812,32 @@ footer{
     color: #fff;
     border: none;
 }
+@media screen and (max-width: 769px) {
+    .footer-form-btn{
+        width: 90px;   
+        height: 40px;
+        margin-top: 28px;
+        margin-left: 45px;          
+    }
+}
 .footer-form-text{
     text-align: center;
     font-size: 10px;
     margin: 10px 0;
 }
+
+/*  Footer social media Start*/
+.footer-social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 31px;
+}
+.footer-social-media i {
+    margin: 40px;
+    color:#2e2e2e;
+}
+/* Footer social media End */
 .footer-enlaces{
     margin-top: 30px;
     display: flex;
@@ -672,19 +845,63 @@ footer{
 }
 .enlaces{
     width: 20%;
+    font-size:12px;  
+    visibility: hidden;
+}
+.enlaces a{
+     color: #2e2e2e;
 }
 .enlaces-for{
     width: 30%;
+    visibility: hidden;
 }
-
 .enlaces-h1{
     font-size: 15px;
     margin-bottom: 10px;
 }
 .enlaces-text{
     font-size: 10px;
+    color: #2e2e2e;
 }
 
+/* -------------------- */
+
+.dropdown-footer {
+    width : 300px; 
+    background: #d9d9d9;
+    margin : 40px auto; 
+  }
+  
+.dropdown-span {
+    padding : 30px;
+    background : #2d2f31; 
+    color : white;
+    font-size : 1.2em;
+    font-variant : small-caps;
+    cursor : pointer;
+    display: block;
+  }
+  
+  .dropdown-span::after {
+    float: right;
+    right: 10%;
+    content: "+";
+  }
+  
+  .slide {
+    clear:both;
+    width:100%;
+    height:0px;
+    overflow: hidden;
+    text-align: center;
+    transition: height .4s ease;
+  }
+  
+  .slide li {padding : 30px;}
+  
+  #touch {position: absolute; opacity: 0; height: 0px;}    
+  
+  #touch:checked + .slide {height: 300px;} 
 
 /* Footer End */
 
