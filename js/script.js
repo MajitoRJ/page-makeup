@@ -1,3 +1,41 @@
+const carouselHTML = document.querySelector(".carousel");
+if (carouselHTML) {
+    carouselHTML.innerHTML = "";
+    productos.forEach(producto => {
+
+        producto.imgSlider
+        const cardProducts = `
+            <div class="card-2" draggable="false"> 
+                <div class="card-2-elements">
+                    <img src="${producto.imgSlider}" alt="">
+                    <div class="card-2-text-icons">
+                        <div>
+                            <p>${producto.catgory}</p>
+                        </div>
+                        <div>
+                            <i class='bx bxs-star icon-start'></i>
+                            <i class='bx bxs-star icon-start'></i>
+                            <i class='bx bxs-star icon-start'></i>
+                            <i class='bx bxs-star icon-start'></i>
+                            <i class='bx bxs-star icon-start'></i>
+                        </div>
+                    </div>
+                    <div class="card-2-text">
+                        <p>${producto.productName}</p>
+                    </div>
+                </div>
+                
+                <button class="card-2-btn">Add to bag $${producto.price}</button>
+            </div>  
+        `;
+        //carouselHTML.innerHTML = carouselHTML.innerHTML + cardProducts
+        carouselHTML.innerHTML += cardProducts; 
+    });
+} else {
+    console.error("Container carousel was not founded")
+}
+
+
 // select start
 const optionMenu = document.querySelector(".select-menu"),
         selectBtn = optionMenu.querySelector(".select-btn"),
@@ -138,3 +176,5 @@ function moveToLeft() {
     slider.style.transition = "all ease .6s"
 }
 // Slider 2 End
+
+

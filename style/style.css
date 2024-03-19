@@ -15,6 +15,7 @@
 
 body {
     font-family: 'Times New Roman', Times, serif;
+    background-color: #f2f2f2;
 }
 
 /* header start */
@@ -363,7 +364,7 @@ nav ul  li ul  li a:hover {
 
 .banner-1-box{
     position: relative;
-    bottom: -400px;
+    bottom: -50px;
     margin-left: 30px;
     width: 220px;
     color: white;
@@ -377,7 +378,7 @@ nav ul  li ul  li a:hover {
 
  @media screen and (max-width:769px){
     .banner-1-box{
-        bottom: -300px;
+        /* bottom: -300px; */
         font-size: 15px;
     }
     .banner-1-box h2{   
@@ -675,6 +676,7 @@ nav ul  li ul  li a:hover {
 .banner-2{
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
+    background-color: #fff;
     gap: 20px; 
 }
 
@@ -734,7 +736,13 @@ footer{
 .footer-container{
     width: 60%;
     margin: 0 auto;
-    height: 70vh;
+    /* height: 700px; */
+}
+
+@media screen and (max-width: 769px) {
+    .footer-container{
+        width: 100%;
+    }
 }
 
 /* icons footer start */
@@ -767,8 +775,16 @@ footer{
 /* responsive icons footer end */
 
 .footer-form div{
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
+}
+@media screen and (max-width: 769px) {
+    .footer-form{
+        width: 100%;
+    }
+    .footer-form div{
+        width: 90%;
+    }
 }
 
 .footer-form-heading{
@@ -790,7 +806,7 @@ footer{
 }
 @media screen and (max-width: 769px){
     .footer-form-email{
-       display: inline;
+       /* display: inline; */
     }
 }
 .footer-form-input{
@@ -800,8 +816,8 @@ footer{
 }
 @media screen and (max-width: 769px){
     .footer-form-input{
-        width: 250px;
-        margin-left: -40px;     
+        /* width: 250px;
+        margin-left: -40px;      */
     } 
 }
 
@@ -814,10 +830,7 @@ footer{
 }
 @media screen and (max-width: 769px) {
     .footer-form-btn{
-        width: 90px;   
-        height: 40px;
-        margin-top: 28px;
-        margin-left: 45px;          
+        font-size: 10px;
     }
 }
 .footer-form-text{
@@ -839,21 +852,23 @@ footer{
 }
 /* Footer social media End */
 .footer-enlaces{
-    margin-top: 30px;
+    margin: 30px 0px;
+
+    /* height: auto; */
+}
+.enlaces-media-1{
     display: flex;
     justify-content: space-between;
 }
 .enlaces{
     width: 20%;
     font-size:12px;  
-    visibility: hidden;
 }
 .enlaces a{
      color: #2e2e2e;
 }
 .enlaces-for{
     width: 30%;
-    visibility: hidden;
 }
 .enlaces-h1{
     font-size: 15px;
@@ -864,25 +879,54 @@ footer{
     color: #2e2e2e;
 }
 
-/* -------------------- */
+@media screen and (max-width: 759px) {
+    .enlaces-media-1{
+        margin-top: 0px;
+        display: none;
+        width: 0px;
+        height: 0px;
+    }
+    .enlaces{
+        width: 0px;
+        height: 0px;
+    }
+    .enlaces-for{
+        width: 0px;
+        height: 0px;
+    }
+    .enlaces-h1{
+        font-size: 0px;
+        margin-bottom: 0px;
+    }
 
-.dropdown-footer {
-    width : 300px; 
-    background: #d9d9d9;
-    margin : 40px auto; 
-  }
+}
+
+/* -------------------- */
+.enlaces-media-2{
+    /* display: flex; */
+}
+.nav {
+    display: none;
+    width: 150px; 
+    margin : 10px auto; 
+}
+
+@media screen and (max-width: 769px) {
+    .nav{
+        display: block;
+    }
+}
   
-.dropdown-span {
-    padding : 30px;
-    background : #2d2f31; 
-    color : white;
+  .span {
     font-size : 1.2em;
-    font-variant : small-caps;
     cursor : pointer;
     display: block;
+    text-align: center;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
   }
   
-  .dropdown-span::after {
+  .span::after {
     float: right;
     right: 10%;
     content: "+";
@@ -897,12 +941,30 @@ footer{
     transition: height .4s ease;
   }
   
-  .slide li {padding : 30px;}
-  
-  #touch {position: absolute; opacity: 0; height: 0px;}    
-  
-  #touch:checked + .slide {height: 300px;} 
+  .slide li {
+    padding : 10px;
+}
 
+  .slide li a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #000;
+  }
+
+
+  /* @media screen and (max-width: 769px) { */
+    #touch {position: absolute; opacity: 0; height: 0px;}    
+  
+    #touch:checked + .slide {height: 250px;} 
+  
+    #touch2 {position: absolute; opacity: 0; height: 0px;}    
+    
+    #touch2:checked + .slide {height: 180px;} 
+  
+    #touch3 {position: absolute; opacity: 0; height: 0px;}    
+    
+    #touch3:checked + .slide {height: 130px;} 
+/* } */
 /* Footer End */
 
 
