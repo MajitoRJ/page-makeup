@@ -1,8 +1,48 @@
+let modalCloseBtn = document.querySelector('.modal-close-btn');
+let modalBtn = document.getElementById('modal-btn');
+
+if (modalCloseBtn) {
+    modalCloseBtn.addEventListener('click', function() {
+        if (modalBtn) {
+            modalBtn.checked = false;
+        }
+    });
+}
+
+setTimeout(() => {
+    if (modalBtn) {
+        modalBtn.checked = true;
+    }
+}, 5000);
+// modal 2
+let modalCloseBtn2 = document.querySelector('.modal-close-btn-2');
+let modalBtn2 = document.getElementById('modal-btn-2');
+let btnCart = document.getElementById('btn-modal-cart');
+
+if (modalCloseBtn2) {
+    modalCloseBtn2.addEventListener('click', function() {
+        if (modalBtn2) {
+            modalBtn2.checked = false;
+        }
+    });
+}
+
+if (btnCart) {
+    btnCart.addEventListener('click', function() {
+        modalBtn2.checked = modalBtn2.checked ? false : true;
+    });
+}
+
+
+
+
+
+
+
 const carouselHTML = document.querySelector(".carousel");
 if (carouselHTML) {
     carouselHTML.innerHTML = "";
     productos.forEach(producto => {
-
         producto.imgSlider
         const cardProducts = `
             <div class="card-2" draggable="false"> 
