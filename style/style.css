@@ -559,9 +559,7 @@ nav ul  li ul  li a:hover {
     scroll-behavior: auto;
 
 }
-.icon-start{
-    /* visibility:; */
-}
+
 
 .carousel .dragging .card-2{
     pointer-events: none;
@@ -805,9 +803,7 @@ footer{
     justify-content: space-between;
 }
 @media screen and (max-width: 769px){
-    .footer-form-email{
-       /* display: inline; */
-    }
+    
 }
 .footer-form-input{
     display: inline-block;
@@ -815,10 +811,7 @@ footer{
     padding: 15px;
 }
 @media screen and (max-width: 769px){
-    .footer-form-input{
-        /* width: 250px;
-        margin-left: -40px;      */
-    } 
+    
 }
 
 .footer-form-btn{
@@ -858,8 +851,6 @@ footer{
 /* Footer social media End */
 .footer-enlaces{
     margin: 30px 0px;
-
-    /* height: auto; */
 }
 .enlaces-media-1{
     display: flex;
@@ -907,9 +898,7 @@ footer{
 }
 
 /* -------------------- */
-.enlaces-media-2{
-    /* display: flex; */
-}
+
 .nav {
     display: none;
     width: 150px; 
@@ -972,12 +961,10 @@ footer{
 /* } */
 /* Footer End */
 
-
-
-/* Modal Start*/
-.section-modal{
+/* First modal Start */
+.section{
     position: relative;
-    /* width: 100%; */
+    width: 100%;
     display: block;
     display: -ms-flexbox;
     display: flex;
@@ -986,88 +973,13 @@ footer{
     -ms-flex-pack: center;
     justify-content: center;
   }
- 
-  
-  .modal-btn:checked,
-  .modal-btn:not(:checked){
-    position: absolute;
-    left: -9999px;
-  }
-  .modal-btn:checked + label,
-  .modal-btn:not(:checked) + label{
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 2;
-    height: 50px;
-    transition: all 200ms linear;
-    border-radius: 4px;
-    width: 240px;
-    letter-spacing: 1px;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    justify-content: center;
-    -ms-flex-pack: center;
-    text-align: center;
-      -ms-flex-item-align: center;
-      align-self: center;
-    border: none;
-    cursor: pointer;
-    background-color: #102770;
-    color: #ffeba7;
-    box-shadow: 0 12px 35px 0 rgba(16,39,112,.25);
-  }
-  .modal-btn:not(:checked) + label:hover{
-    background-color: #ffeba7;
-    color: #102770;
-  }
+
   .modal-btn:checked + label .uil,
   .modal-btn:not(:checked) + label .uil{
       margin-left: 10px;
       font-size: 18px;
   }
-  .modal-btn:checked + label:after,
-  .modal-btn:not(:checked) + label:after{
-    position: fixed;
-    top: 30px;
-    right: 30px;
-    z-index: 1000;
-    width: 40px;
-    border-radius: 3px;
-    height: 30px;
-    text-align: center;
-    line-height: 30px;
-    font-size: 18px;
-    background-color: #ffeba7;
-    color: #102770;
-    font-family: 'unicons';
-    content: '\eac6'; 
-    box-shadow: 0 12px 25px 0 rgba(16,39,112,.25);
-    transition: all 200ms linear;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(20px);
-  }
-  .modal-btn:checked + label:hover:after,
-  .modal-btn:not(:checked) + label:hover:after{
-    background-color: #102770;
-    color: #ffeba7;
-  }
-  .modal-btn:checked + label:after{
-    transition: opacity 300ms 300ms ease, transform 300ms 300ms ease, background-color 250ms linear, color 250ms linear;
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-  }
+  
   .modal{
     position: fixed;
     display: block;
@@ -1099,6 +1011,7 @@ footer{
     display: block;
     width: 100%;
     max-width: 400px;
+    height: 705px;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -1118,42 +1031,66 @@ footer{
     width: 100%;
     height: auto;
   }
-  .modal-wrap p {
-    padding: 20px 30px 0 30px;
-  }
+  .text-1{
+    margin-bottom: 25px;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+ }
+ .text-2{
+    font-size: 13px;
+    text-align: center;
+    justify-content: center;
+ }
+ .elements-first-modal input{
+    display: block;
+    width: 70%;
+    margin-top: 40px;
+    margin-left: 50px;
+    padding: 15px;
+    height: 20px;
+    border: 1px solid #000;
+
+ }
+ .elements-first-modal button{
+    display: block;
+    width: 70%;
+    margin-top: 15px;
+    margin-left: 50px;
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #000;
+    height: 40px;
+ }
+
   .modal-btn:checked ~ .modal .modal-wrap{
     opacity: 1;
     transform: scale(1);
     transition: opacity 250ms 500ms ease, transform 350ms 500ms ease;
   }
   
-  .modal-btn:checked ~ .logo img {
-    filter: brightness(100%);
-  transition: all 250ms linear;
-}
-
-
-@media screen and (max-width: 500px) {
-  .modal-wrap {
-      width: calc(100% - 40px);
-      padding-bottom: 15px;
+  @media screen and (max-width: 500px) {
+      .modal-wrap {
+          width: calc(100% - 40px);
+          padding-bottom: 15px;
+          height: 650px;
+      }
   }
-  .modal-wrap p {
-    padding: 15px 20px 0 20px;
+  .modal-close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
   }
-}
-
-.modal-close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: transparent;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-}
+  
+  /* First modal End */
 
 /* modal 2 */
 .section-modal-2{
@@ -1166,89 +1103,8 @@ footer{
     -ms-flex-pack: center;
     justify-content: flex-end;
   }
- 
-  
-  .modal-btn-2:checked,
-  .modal-btn-2:not(:checked){
-    position: absolute;
-    left: -9999px;
-  }
-  .modal-btn-2:checked + label,
-  .modal-btn-2:not(:checked) + label{
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 2;
-    height: 50px;
-    transition: all 200ms linear;
-    border-radius: 4px;
-    width: 240px;
-    letter-spacing: 1px;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    justify-content: center;
-    -ms-flex-pack: center;
-    text-align: center;
-      -ms-flex-item-align: center;
-      align-self: center;
-    border: none;
-    cursor: pointer;
-    background-color: #102770;
-    color: #ffeba7;
-    box-shadow: 0 12px 35px 0 rgba(16,39,112,.25);
-  }
-  .modal-btn-2:not(:checked) + label:hover{
-    background-color: #ffeba7;
-    color: #102770;
-  }
-  .modal-btn-2:checked + label .uil,
-  .modal-btn-2:not(:checked) + label .uil{
-      margin-left: 10px;
-      font-size: 18px;
-  }
-  .modal-btn-2:checked + label:after,
-  .modal-btn-2:not(:checked) + label:after{
-    position: fixed;
-    top: 30px;
-    right: 30px;
-    z-index: 1000;
-    width: 40px;
-    border-radius: 3px;
-    height: 30px;
-    text-align: center;
-    line-height: 30px;
-    font-size: 18px;
-    background-color: #ffeba7;
-    color: #102770;
-    font-family: 'unicons';
-    content: '\eac6'; 
-    box-shadow: 0 12px 25px 0 rgba(16,39,112,.25);
-    transition: all 200ms linear;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(20px);
-  }
-  .modal-btn-2:checked + label:hover:after,
-  .modal-btn-2:not(:checked) + label:hover:after{
-    background-color: #102770;
-    color: #ffeba7;
-  }
-  .modal-btn-2:checked + label:after{
-    transition: opacity 300ms 300ms ease, transform 300ms 300ms ease, background-color 250ms linear, color 250ms linear;
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-  }
-  .modal-2{
+
+.modal-2{
     position: fixed;
     display: block;
     display: -ms-flexbox;
@@ -1266,73 +1122,78 @@ footer{
     background-color: rgba(31,32,41,.75);
     pointer-events: none;
     opacity: 0;
-    transition: opacity 250ms 700ms ease;
-  }
-  .modal-btn-2:checked ~ .modal-2{
+    transition: opacity 300ms 200ms ease;
+}
+.modal-btn-2:checked ~ .modal-2{
     pointer-events: auto;
     opacity: 1;
-    transition: all 300ms ease-in-out;
-  }
-  .modal-wrap-2 {
+    transition: all 200ms ease-in-out;
+}
+.modal-wrap-2 {
     position: relative;
     display: block;
     width: 100%;
     max-width: 400px;
     height: 100%;
-    border-radius: 4px;
     overflow: hidden;
     padding-bottom: 20px;
     background-color: #fff;
-      -ms-flex-item-align: center;
-      align-self: center;
-      box-shadow: 0 12px 25px 0 rgba(199,175,189,.25);
+    -ms-flex-item-align: center;
+    align-self: center;
+    box-shadow: 0 12px 25px 0 rgba(199,175,189,.25);
     opacity: 0;
     transform: scale(0.6);
     transition: opacity 250ms 250ms ease, transform 300ms 250ms ease;
-  }
-  .modal-wrap-2 img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  .modal-wrap-2 p {
-    padding: 20px 30px 0 30px;
-  }
-  .modal-btn-2:checked ~ .modal-2 .modal-wrap-2{
+}
+
+.modal-btn-2:checked ~ .modal-2 .modal-wrap-2{
     opacity: 1;
     transform: scale(1);
     transition: opacity 250ms 500ms ease, transform 350ms 500ms ease;
-  }
-  
-  .modal-btn-2:checked ~ .logo img {
-    filter: brightness(100%);
-  transition: all 250ms linear;
 }
-
 
 @media screen and (max-width: 500px) {
   .modal-wrap-2 {
       width: calc(100% - 40px);
       padding-bottom: 15px;
   }
-  .modal-wrap-2 p {
-    padding: 15px 20px 0 20px;
-  }
+
 }
 
-.modal-close-btn-2 {
+.bx-x {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: transparent;
-  color: #fff;
+  top: 18px;
+  margin-left: 20px;
+  font-size: 44px;
+  color: #313131;
   border: none;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
 }
-
-
+.text-cart-modal{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 80%;
+    font-size: 18px;
+    color: #3f3f3f;
+    
+}
+.links-modal-cart a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    margin-top: 30px;
+    padding: 15px 60px ;
+    width: 200px;
+    border: 1px solid #dddddd;
+    color: black;
+    font-size: 12px;
+    transition: all ease 0.5s; 
+}
+.links-modal-cart a:hover{
+    border-color: black;
+}
 /* Modal End*/
 
 

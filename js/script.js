@@ -13,9 +13,9 @@ setTimeout(() => {
     if (modalBtn) {
         modalBtn.checked = true;
     }
-}, 5000);
+}, 1000);
 // modal 2
-let modalCloseBtn2 = document.querySelector('.modal-close-btn-2');
+let modalCloseBtn2 = document.querySelector('.bx-x');
 let modalBtn2 = document.getElementById('modal-btn-2');
 let btnCart = document.getElementById('btn-modal-cart');
 
@@ -33,19 +33,13 @@ if (btnCart) {
     });
 }
 
-
-
-
-
-
-
 const carouselHTML = document.querySelector(".carousel");
 if (carouselHTML) {
     carouselHTML.innerHTML = "";
     productos.forEach(producto => {
         producto.imgSlider
         const cardProducts = `
-            <div class="card-2" draggable="false"> 
+            <div class="card-2" draggable="false" id="${producto.id}"> 
                 <div class="card-2-elements">
                     <img src="${producto.imgSlider}" alt="">
                     <div class="card-2-text-icons">
@@ -70,11 +64,16 @@ if (carouselHTML) {
         `;
         //carouselHTML.innerHTML = carouselHTML.innerHTML + cardProducts
         carouselHTML.innerHTML += cardProducts; 
+
+        // Agregar evento click a cada tarjeta
+        const card = document.getElementById(producto.id);
+        card.addEventListener('click', () => {
+            console.log(producto); // Imprime el objeto producto al hacer click en la tarjeta
+        });
     });
 } else {
     console.error("Container carousel was not founded")
 }
-
 
 // select start
 const optionMenu = document.querySelector(".select-menu"),
@@ -89,11 +88,8 @@ selectBtn.addEventListener("click", () => optionMenu.classList.toggle("active"))
     option.addEventListener("click", () =>{
         let selectedOption =  option.querySelector(".option-text").innerText;
         sBtn_text.innerText = selectedOption;
-        
         optionMenu.classList.remove("active");
-    })
-
-
+    });
  })
  // select send
 
@@ -216,5 +212,4 @@ function moveToLeft() {
     slider.style.transition = "all ease .6s"
 }
 // Slider 2 End
-
 
