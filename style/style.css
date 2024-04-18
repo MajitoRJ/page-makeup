@@ -1069,25 +1069,40 @@ footer{
     opacity: 1;
     transform: scale(1);
     transition: opacity 250ms 500ms ease, transform 350ms 500ms ease;
-  }
+}
+  .modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+.xbtn{
+    display: none;
+}
   
   @media screen and (max-width: 500px) {
       .modal-wrap {
           width: calc(100% - 40px);
           padding-bottom: 15px;
-          height: 650px;
+          height: 700px;
       }
-  }
-  .modal-close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background-color: transparent;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: bold;
+      .xbtn{
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 25px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .modal-close-btn{
+        display: none;
+    }
   }
   
   /* First modal End */
@@ -1159,8 +1174,7 @@ footer{
   }
 
 }
-
-.bx-x {
+.xbtn2 {
   position: absolute;
   top: 18px;
   margin-left: 20px;

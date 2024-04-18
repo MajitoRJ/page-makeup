@@ -1,11 +1,19 @@
-let modalCloseBtn = document.querySelector('.modal-close-btn');
+let modalCloseBtn = document.querySelector('.xbtn');
+let modalCloseText = document.querySelector('.modal-close-btn');
 let modalBtn = document.getElementById('modal-btn');
 
 if (modalCloseBtn) {
     modalCloseBtn.addEventListener('click', function() {
         if (modalBtn) {
             modalBtn.checked = false;
-        }
+        } 
+    });
+} 
+if (modalCloseText){
+    modalCloseText.addEventListener('click', function(){
+       if (modalBtn) {
+        modalBtn.checked = false;
+       }
     });
 }
 
@@ -15,7 +23,7 @@ setTimeout(() => {
     }
 }, 1000);
 // modal 2
-let modalCloseBtn2 = document.querySelector('.bx-x');
+let modalCloseBtn2 = document.querySelector('.xbtn2');
 let modalBtn2 = document.getElementById('modal-btn-2');
 let btnCart = document.getElementById('btn-modal-cart');
 
